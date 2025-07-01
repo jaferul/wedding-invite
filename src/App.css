@@ -1,0 +1,261 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #faf8f7;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+header {
+  min-height: 100vh;
+  max-width: 1280px;
+  overflow: hidden;
+  background-image: url("/headerImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    background-image: url("/headerImgMobile.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.overlay {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(183, 162, 154, 0.39);
+}
+.nameTitle {
+  position: relative;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1em;
+}
+.headerDate {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+  position: relative;
+  font-style: italic;
+}
+.footerTitle {
+  position: relative;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1em;
+}
+.footerDate {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #000000;
+  position: relative;
+  font-style: italic;
+}
+.wedding-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid #bd945a;
+  border-radius: 10px;
+
+  transform: translateX(-100px);
+  opacity: 0;
+  transition:
+    transform 1.2s ease-out,
+    opacity 1.2s ease-out;
+}
+
+.wedding-image.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.wedding-image-text {
+  transform: translateX(100px);
+  opacity: 0;
+  transition:
+    transform 1.2s ease-out,
+    opacity 1.2s ease-out;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.wedding-image-text.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.wedding-image-subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 30px;
+  color: #bd945a;
+  line-height: 1.25em;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 10px;
+}
+.wedding-image-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.eventDate {
+  height: 278px;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/headerImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    height: 278px;
+    background-image: url("/p10.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.locationCard {
+  position: relative;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 5px solid #bd945a;
+  border-radius: 10px;
+}
+
+.locationCardText {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px 20px;
+  font-family: "Nunito Sans", sans-serif;
+  gap: 20px;
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.formCard {
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px 20px;
+  background-color: #fff;
+  position: relative;
+}
+
+.formCardImage {
+  position: relative;
+  padding: 30px;
+  margin-top: 40px;
+  background-image: url("/p5.jpg");
+  background-size: cover;
+}
+
+.inputField {
+  padding: 5px 15px;
+  display: block;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #000;
+  background-image: none;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+}
+
+.submitButton {
+  padding: 5px 15px;
+  display: block;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #bd945a;
+  margin-top: 20px;
+}
+
+.normalButton {
+  padding: 5px 15px;
+  display: block;
+  width: 200px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #bd945a;
+  place-self: center;
+}
+
+.messageInput {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #000;
+  background-image: none;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+}
+
+.form-subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 30px;
+  color: #bd945a;
+  line-height: 1.25em;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 10px;
+  place-self: center;
+  margin-top: 0;
+}
