@@ -45,7 +45,7 @@ export default function App() {
         style={{ marginTop: 70, paddingRight: 30, paddingLeft: 30 }}
       >
         <img
-          src="wedding-invite/usImage.jpg"
+          src="./wedding-invite/usImage.jpg"
           alt="Wedding Invitation"
           className={`wedding-image ${inView && "slide-in"}`}
         />
@@ -81,7 +81,7 @@ export default function App() {
       </h4>
       <div className="locationCard">
         <img
-          src="wedding-invite/p7.jpg"
+          src="./wedding-invite/p7.jpg"
           alt="Wedding Invitation"
           height={213}
           style={{ objectFit: "cover" }}
