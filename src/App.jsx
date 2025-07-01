@@ -4,6 +4,8 @@ import locationIcon from "./assets/locationIcon.svg";
 import clockIcon from "./assets/clockIcon.svg";
 import mapIcon from "./assets/mapIcon.svg";
 import ParticipationForm from "./ParticipationForm";
+import usImage from "./assets/usImage.jpg";
+import p7 from "./assets/p7.jpg";
 
 export default function App() {
   const detailsRef = useRef(null);
@@ -45,7 +47,7 @@ export default function App() {
         style={{ marginTop: 70, paddingRight: 30, paddingLeft: 30 }}
       >
         <img
-          src="./wedding-invite/usImage.jpg"
+          src={usImage}
           alt="Wedding Invitation"
           className={`wedding-image ${inView && "slide-in"}`}
         />
@@ -81,7 +83,7 @@ export default function App() {
       </h4>
       <div className="locationCard">
         <img
-          src="./wedding-invite/p7.jpg"
+          src={p7}
           alt="Wedding Invitation"
           height={213}
           style={{ objectFit: "cover" }}
