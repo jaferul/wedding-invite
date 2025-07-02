@@ -6,6 +6,7 @@ import mapIcon from "./assets/mapIcon.svg";
 import ParticipationForm from "./ParticipationForm";
 import usImage from "./assets/usImage.jpg";
 import p7 from "./assets/p7.jpg";
+import connectionImage from "./assets/connectionImage.png";
 
 export default function App() {
   const detailsRef = useRef(null);
@@ -39,12 +40,23 @@ export default function App() {
         <div className="overlay" />
         <div style={{ textAlign: "center", padding: "2rem" }}>
           <h1 className="nameTitle">Karina & Jafer</h1>
-          <h5 className="headerDate">24 Mai 2026 - Bucuresti</h5>
+          <h5 className="headerDate">24 Mai 2026 - București</h5>
         </div>
       </header>
+      <img
+        src={connectionImage}
+        alt="Connection"
+        width="150px"
+        height="auto"
+        style={{
+          objectFit: "contain",
+          display: "block",
+          margin: "0 auto",
+        }}
+      />
       <div
         ref={detailsRef}
-        style={{ marginTop: 70, paddingRight: 30, paddingLeft: 30 }}
+        style={{ marginTop: 0, paddingRight: 30, paddingLeft: 30 }}
       >
         <img
           src={usImage}
@@ -55,26 +67,26 @@ export default function App() {
           <h4 className="wedding-image-subtitle">Iubirea noastră</h4>
           <h3 className="wedding-image-title">Împărtășită cu voi.</h3>
           <p>
-            Sunt momente în viață pe care le aștepți cu sufletul la gură și cu
-            fluturași în stomac, iar acesta, pentru noi, este unul dintre ele.
+            Sunt momente în viață care ating inima cu o intensitate aparte —
+            clipe care ne umplu sufletul de emoție și ne dau curajul să visăm
+            mai departe. Pentru noi, această zi marchează începutul unei povești
+            scrise în doi, cu iubire, încredere și speranță.
           </p>
           <p>
-            Începând cu această zi vom păși spre viitor cu planuri ambițioase,
-            cu visuri mărețe și cu forțe proaspete, unite.
+            Cu pași siguri, pornim împreună pe drumul vieții, ghidați de iubirea
+            care ne leagă și de dorința de a clădi un viitor comun.
           </p>
           <p>
-            Avem deosebita plăcere de a vă invita să fiți alături de noi în ziua
-            în care sufletele noastre se vor uni.
+            Cu multă emoție și bucurie, vă invităm să fiți alături de noi în
+            ziua în care sufletele noastre își unesc destinele.
           </p>
-          <p>Vă așteptăm cu drag!</p>
         </div>
       </div>
       <div className="eventDate">
         <div className="overlay" />
         <div style={{ textAlign: "center", padding: "2rem" }}>
-          <h1 className="nameTitle">Va asteptam sa fiti alaturi de noi!</h1>
+          <h1 className="nameTitle">Vă așteptăm să fiți alături de noi!</h1>
           <h5 className="headerDate">24 Mai 2026</h5>
-          <CountdownTimer targetDate="2026-05-24T17:00:00" />
         </div>
       </div>
 
@@ -99,7 +111,7 @@ export default function App() {
               height={16}
               width={16}
             />
-            <span>Aleea Cu Brazi 3-5, Buftea 070000, Romania</span>
+            <span>Aleea Cu Brazi 3-5, Buftea 070000, România</span>
           </div>
           <div className="iconText">
             <img src={clockIcon} alt="Clock Icon" height={16} width={16} />
@@ -121,9 +133,18 @@ export default function App() {
         <div className="overlay" />
         <ParticipationForm />
       </div>
-      <div style={{ textAlign: "center", padding: "2rem" }}>
+      <div style={{ textAlign: "center", padding: "0 2rem 2rem 2rem" }}>
+        <img
+          src={connectionImage}
+          alt="Connection"
+          width="150px"
+          height="auto"
+          style={{
+            objectFit: "contain",
+          }}
+        />
         <h1 className="footerTitle">Karina & Jafer</h1>
-        <h5 className="footerDate">24 Mai 2026 - Bucuresti</h5>
+        <h5 className="footerDate">24 Mai 2026 - București</h5>
       </div>
     </>
   );

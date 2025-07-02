@@ -72,11 +72,10 @@ export default function ParticipationForm() {
   return (
     <section className="formCard">
       <h4 className="form-subtitle">Vei participa?</h4>
-      <p>
-        Vă așteptăm cu drag! <br />
+      <p style={{ textAlign: "center" }}>
+        Vă așteptăm cu drag!
         <br />
-        Avem deosebita plăcere de a vă invita să fiți alături de noi în ziua în
-        care sufletele noastre se vor uni.
+        Completeaza formularul de mai jos pentru a ne anunta decizia ta.
       </p>
       <form className="form" onSubmit={handleSubmit}>
         {people.map((person, index) => (
@@ -89,7 +88,7 @@ export default function ParticipationForm() {
               alignItems: "start",
             }}
           >
-            <label htmlFor="name">Full name</label>
+            <label htmlFor="name">Persoana {index + 1}</label>
             <div
               style={{
                 width: "100%",
@@ -103,7 +102,7 @@ export default function ParticipationForm() {
               <input
                 id="name"
                 type="text"
-                placeholder="Full name"
+                placeholder="Nume și Prenume"
                 value={person.name}
                 onChange={(e) =>
                   handleInputChange(index, "name", e.target.value)
@@ -123,11 +122,11 @@ export default function ParticipationForm() {
           </div>
         ))}
         <button type="button" onClick={addPerson} className="normalButton">
-          Adauga inca o persoana
+          Adaugă încă o persoană
         </button>
         {/* New Attendance Options */}
         <div style={{ marginTop: "16px", marginBottom: "16px" }}>
-          <p style={{ marginBottom: "8px" }}>Attendance Confirmation:</p>
+          <p style={{ marginBottom: "8px" }}>Confirmă prezența</p>
           <label style={{ marginRight: "16px" }}>
             <input
               onChange={(e) => setAnswer(e.target.value)}
@@ -157,17 +156,17 @@ export default function ParticipationForm() {
             alignItems: "start",
           }}
         >
-          <label htmlFor="dietReq">Diet Requirements</label>
+          <label htmlFor="dietReq">Preferințe alimentare</label>
           <textarea
             id="dietReq"
-            placeholder="Any dietary requirements or allergies? Please specify per person."
+            placeholder="Vă rugăm să mentionați orice intoleranțe sau preferințe alimentare (ex: vegetarian, vegan, alergii etc.)"
             value={dietReq}
             onChange={(e) => setDietReq(e.target.value)}
             className="messageInput"
           />
         </div>
         <button className="submitButton" type="submit" disabled={loading}>
-          {loading ? "Se trimite..." : "Trimite raspuns"}
+          {loading ? "Se trimite..." : "Trimite răspuns"}
         </button>
       </form>
     </section>

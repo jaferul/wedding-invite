@@ -59,6 +59,7 @@ header {
   font-weight: 400;
   color: #000000;
   line-height: 1em;
+  margin-top: 0;
 }
 .footerDate {
   font-family: "Nunito Sans", sans-serif;
@@ -168,6 +169,7 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .formCard {
@@ -245,6 +247,7 @@ header {
   background-image: none;
   border: 1px solid #ececec;
   border-radius: 8px;
+  min-height: 100px;
 }
 
 .form-subtitle {
@@ -255,7 +258,7 @@ header {
   color: #bd945a;
   line-height: 1.25em;
   font-family: "Dancing Script", cursive;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   place-self: center;
   margin-top: 0;
 }
