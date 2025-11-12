@@ -1,30 +1,35 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #faf8f7;
+  background-color: #f2eadf;
 }
 
 #root {
   overflow-x: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset;
+  background-color: #fff;
+
+  @media (min-width: 600px) {
+    box-shadow: inset 0px 0px 20px 2px #bd945a;
+  }
+
+
 }
 
 header {
   min-height: 100vh;
   max-width: 1280px;
   overflow: hidden;
-  background-image: url("/headerImg.jpg");
+  background-repeat: no-repeat; 
+  background-image: url("/headerImgMobile.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 768px) {
-    background-image: url("/headerImgMobile.jpg");
-    background-size: cover;
-    background-position: center center;
-  }
 }
 .overlay {
   z-index: 0;
